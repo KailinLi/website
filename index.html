@@ -69,7 +69,6 @@
                     <!-- I'm interested in computer vision, machine learning, optimization, and image processing. Much of my
                     research is about inferring the physical world (shape, motion, color, light, etc) from images.
                     Representative papers are <span class="highlight">highlighted</span>. -->
-                    TODO
                   </p>
                 </td>
               </tr>
@@ -79,7 +78,118 @@
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
 
-              <tr onmouseout="refnerf_stop()" onmouseover="refnerf_start()">
+              <tr onmouseout="artiboost_stop()" onmouseover="artiboost_start()">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='artiboost_image'>
+                      <img src='images/artiboost_after.jpg' width="160">
+                    </div>
+                    <img src='images/artiboost_before.png' width="160">
+                  </div>
+                  <script type="text/javascript">
+                    function artiboost_start() {
+                      document.getElementById('artiboost_image').style.opacity = "1";
+                    }
+
+                    function artiboost_stop() {
+                      document.getElementById('artiboost_image').style.opacity = "0";
+                    }
+                    artiboost_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <a href="#">
+                    <papertitle>ArtiBoost: Boosting Articulated 3D Hand-Object Pose Estimation via Online Exploration
+                      and Synthesis
+                    </papertitle>
+                  </a>
+                  <br>
+                  <a href="#">Lixin Yang</a>*,
+                  <strong>Kailin Li</strong>*,
+                  <a href="#">Xinyu Zhan</a>,
+                  <a href="#">Jun Lv</a>, <br>
+                  <a href="#">Wenqiang Xu</a>,
+                  <a href="#">Jiefeng Li</a>,
+                  <a href="#">Cewu Lu</a>
+                  <br>
+                  <em>CVPR</em>, 2022
+                  <br>
+                  <a href="#">project</a>
+                  /
+                  <a href="https://arxiv.org/abs/2109.05488">arxiv</a>
+                  /
+                  <a href="https://github.com/MVIG-SJTU/ArtiBoost">code</a>
+                  <p></p>
+                  <p>
+                    We propose a lightweight online data enrichment method that boosts articulated hand-object pose
+                    estimation
+                    from the data perspective.
+                    During training, ArtiBoost alternatively performs data exploration and synthesis.
+                    Even with a simple baseline, our method can boost it to outperform previous SOTA on several
+                    hand-object benchmarks.</p>
+                </td>
+              </tr>
+
+              <tr onmouseout="cpf_stop()" onmouseover="cpf_start()">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='cpf_image'>
+                      <img src='images/cpf_after.png' width="160">
+                    </div>
+                    <img src='images/cpf_before.jpg' width="160">
+                  </div>
+                  <script type="text/javascript">
+                    function cpf_start() {
+                      document.getElementById('cpf_image').style.opacity = "1";
+                    }
+
+                    function cpf_stop() {
+                      document.getElementById('cpf_image').style.opacity = "0";
+                    }
+                    cpf_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <a href="https://lixiny.github.io/CPF">
+                    <papertitle>CPF: Learning a Contact Potential Field to Model the Hand-Object Interaction
+                    </papertitle>
+                  </a>
+                  <br>
+                  <a href="#">Lixin Yang</a>,
+                  <a href="#">Xinyu Zhan</a>,
+                  <strong>Kailin Li</strong>, <br>
+                  <a href="#">Wenqiang Xu</a>,
+                  <a href="#">Jiefeng Li</a>,
+                  <a href="#">Cewu Lu</a>
+                  <br>
+                  <em>ICCV</em>, 2021
+                  <br>
+                  <a href="https://lixiny.github.io/CPF">project</a>
+                  /
+                  <a
+                    href="https://openaccess.thecvf.com/content/ICCV2021/html/Yang_CPF_Learning_a_Contact_Potential_Field_To_Model_the_Hand-Object_ICCV_2021_paper.html">paper</a>
+                  /
+                  <a
+                    href="https://openaccess.thecvf.com/content/ICCV2021/supplemental/Yang_CPF_Learning_a_ICCV_2021_supplemental.pdf">supp</a>
+                  /
+                  <a href="https://arxiv.org/abs/2012.00924">arxiv</a>
+                  /
+                  <a href="https://github.com/lixiny/CPF">code</a>
+                  /
+                  <a href="https://zhuanlan.zhihu.com/p/406470702">知乎</a>
+                  <p></p>
+                  <p>
+                    We highlight contact in the hand-object interaction modeling task by proposing an
+                    explicit representation named Contact Potential Field (CPF). In CPF, we treate each contacting
+                    hand-object
+                    vertex pair as a spring-mass system, Hence the whole system forms a potential filed with minimal
+                    elastic
+                    energy
+                    at the grasp position.</p>
+                </td>
+              </tr>
+
+              <!-- <tr onmouseout="refnerf_stop()" onmouseover="refnerf_start()">
                 <td style="padding:20px;width:25%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='refnerf_image'><video width=100% height=100% muted autoplay loop>
@@ -124,7 +234,9 @@
                 </td>
               </tr>
 
-              <!-- <tr onmouseout="mipnerf_stop()" onmouseover="mipnerf_start()" bgcolor="#ffffd0">
+              <tr>
+
+              <tr onmouseout="mipnerf_stop()" onmouseover="mipnerf_start()" bgcolor="#ffffd0">
                 <td style="padding:20px;width:25%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='mipnerf_image'><video width=100% height=100% muted autoplay loop>
