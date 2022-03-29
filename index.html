@@ -79,6 +79,62 @@
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
 
+              <tr onmouseout="oakink_stop()" onmouseover="oakink_start()">
+                <td style="padding:25px;width:30%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='oakink_image'>
+                      <img src='images/oakink_after.png' width="200">
+                    </div>
+                    <img src='images/oakink_before.png' width="200">
+                  </div>
+                  <script type="text/javascript">
+                    function oakink_start() {
+                      document.getElementById('oakink_image').style.opacity = "1";
+                    }
+
+                    function oakink_stop() {
+                      document.getElementById('oakink_image').style.opacity = "0";
+                    }
+                    oakink_stop()
+                  </script>
+                </td>
+                <td style="padding:25px;width:70%;vertical-align:middle">
+                  <a href="#">
+                    <papertitle>OakInk: A Large-scale Knowledge Repository for Understanding Hand-Object Interaction
+                    </papertitle>
+                  </a>
+                  <br>
+                  <a href="https://lixiny.github.io">Lixin Yang</a>*,
+                  <strong>Kailin Li</strong>*,
+                  <a href="#">Xinyu Zhan</a>*,
+                  <a href="#">Fei Wu</a>,
+                  <a href="https://anran-xu.github.io">Anran Xu</a>,
+                  <a href="https://liuliu66.github.io">Liu Liu</a>,
+                  <a href="https://www.mvig.org">Cewu Lu</a>
+                  <br>
+                  (*=equal contribution)
+                  <br>
+                  <em>CVPR</em>, 2022
+                  <br>
+                  <a href="#">project</a>
+                  /
+                  <a href="#">arxiv</a>
+                  /
+                  <a href="#">code</a>
+                  /
+                  <a href="#">dataset</a>
+                  <p></p>
+                  <p>
+                    Learning how humans manipulate objects requires machines to acquire knowledge from two perspectives:
+                    one for understanding object affordances and the other for learning human interactions based on
+                    affordances. In this work, we propose a multi-modal and rich-annotated knowledge repository,
+                    <strong>OakInk</strong>,
+                    for the visual and cognitive understanding of hand-object interactions. Check our website for more
+                    details!
+                  </p>
+                </td>
+              </tr>
+
               <tr onmouseout="artiboost_stop()" onmouseover="artiboost_start()">
                 <td style="padding:25px;width:30%;vertical-align:middle">
                   <div class="one">
@@ -108,12 +164,14 @@
                   <a href="https://lixiny.github.io">Lixin Yang</a>*,
                   <strong>Kailin Li</strong>*,
                   <a href="#">Xinyu Zhan</a>,
-                  <a href="https://lyuj1998.github.io">Jun Lv</a>, <br>
+                  <a href="https://lyuj1998.github.io">Jun Lv</a>,
                   <a href="https://wenqiangx.github.io/robotflowproject/">Wenqiang Xu</a>,
                   <a href="https://jeffli.site">Jiefeng Li</a>,
                   <a href="https://www.mvig.org">Cewu Lu</a>
                   <br>
-                  <em>CVPR</em>, 2022
+                  (*=equal contribution)
+                  <br>
+                  <em>CVPR</em>, 2022 &nbsp <font color="red"><strong>(Oral Presentation)</strong></font>
                   <br>
                   <a href="#">project</a>
                   /
@@ -158,7 +216,7 @@
                   <br>
                   <a href="https://lixiny.github.io">Lixin Yang</a>,
                   <a href="#">Xinyu Zhan</a>,
-                  <strong>Kailin Li</strong>, <br>
+                  <strong>Kailin Li</strong>,
                   <a href="https://wenqiangx.github.io/robotflowproject/">Wenqiang Xu</a>,
                   <a href="https://jeffli.site">Jiefeng Li</a>,
                   <a href="https://www.mvig.org">Cewu Lu</a>
