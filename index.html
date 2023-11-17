@@ -29,7 +29,7 @@
                   <p style="text-align:center">
                     <name>Kailin Li | 李恺林</name>
                   </p>
-                  <p>I am presently a fourth-year Ph.D. student in the Department of <a style="color:#545454"
+                  <p>I am presently a fifth-year Ph.D. student in the Department of <a style="color:#545454"
                       href="http://www.cs.sjtu.edu.cn/en/">Computer Science</a> at <a
                       href="http://en.sjtu.edu.cn">Shanghai Jiao Tong University</a>. As an active member of the
                     esteemed SJTU <a href="https://www.mvig.org/">MVIG</a> lab, I work closely under the expert guidance
@@ -80,47 +80,55 @@
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
 
-              <tr>
-                <td style="padding:25px;width:30%;vertical-align:middle">
+              <tr onmouseout="refnerf_stop()" onmouseover="refnerf_start()">
+                <td style="padding:20px;width:25%;vertical-align:middle">
                   <div class="one">
-                    <img src='images/DART.png' width="200">
+                    <div class="two" id='refnerf_image'><video width=100% height=100% muted autoplay loop>
+                        <source src="images/chord_teaser.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video></div>
+                    <img src='images/chord_teaser.mp4' width="160">
                   </div>
+                  <script type="text/javascript">
+                    function refnerf_start() {
+                      document.getElementById('refnerf_image').style.opacity = "0";
+                    }
+
+                    function refnerf_stop() {
+                      document.getElementById('refnerf_image').style.opacity = "0";
+                    }
+                    refnerf_stop()
+                  </script>
                 </td>
                 <td style="padding:25px;width:70%;vertical-align:middle">
                   <a href="#">
-                    <papertitle>DART: Articulated Hand Model with Diverse Accessories and Rich Textures
+                    <papertitle>CHORD: Category-level in-Hand Object Reconstruction via Shape Deformation
                     </papertitle>
                   </a>
                   <br>
-                  <a>Daiheng Gao</a>*,
-                  <a href="https://xiuyuliang.cn">Yuliang Xiu</a>*,
                   <strong>Kailin Li</strong>*,
-                  <a href="https://lixiny.github.io">Lixin Yang</a>*,
-                  <br>
-                  <a>Feng Wang</a>, <a>Peng Zhang</a>, <a>Bang Zhang</a>,
+                  <a href="">Lixin Yang</a>*,
+                  <a href="">Haoyu Zhen</a>
+                  <a href="">Zenan Lin</a>,
+                  <a href="">Xinyu Zhan</a>,
+                  <a href="">Licheng Zhong</a>,
+                  <a href="">Jian Xu</a>,
+                  <a href="">Kejian Wu</a>,
                   <a href="https://www.mvig.org">Cewu Lu</a>,
-                  <a href="https://www.cs.sfu.ca/~pingtan/">Ping Tan</a>
                   <br>
-                  (*=equal contribution)
+                  <strong><em>ICCV</em>, 2023</strong>
                   <br>
-                  <strong><em>NeurIPS</em>, 2022</strong> <em> - Datasets and Benchmarks Track</em>
-                  <br>
-                  <a href="https://dart20220.github.io">project (dataset)</a>
+                  <a href="https://kailinli.github.io/CHORD/">project page</a>
                   /
-                  <a href="https://openreview.net/forum?id=FPgCB_Z_0O">paper</a>
+                  <a href="https://arxiv.org/abs/2308.10574">arxiv</a>
                   /
-                  <a href="#">arxiv</a>
-                  /
-                  <a href="https://github.com/DART2022/DARTset">code</a>
-                  /
-                  <a href=https://www.youtube.com/watch?v=VvlUYe-9b7U&feature=youtu.be">video</a>
+                  <a href=https://github.com/anyeZHY/PyBlend">PyBlend</a>
                   <p></p>
                   <p>
-                    In this paper, we extend MANO with more Diverse Accessories and Rich Textures, namely DART.
-                    DART is comprised of 325 exquisite hand-crafted texture maps which vary in appearance and cover
-                    different kinds of blemishes, make-ups, and accessories.
-                    We also generate large-scale (800K), diverse, and high-fidelity hand images, paired with
-                    perfect-aligned 3D labels, called DARTset.
+                    We proposed a new method CHORD which exploits the categorical shape prior for reconstructing the
+                    shape of intra-class objects. In addition, we constructed a new dataset, COMIC, of category-level
+                    hand-object interaction. COMIC encompasses a diverse collection of object instances, materials, hand
+                    interactions, and viewing directions, as illustrated.
                   </p>
                 </td>
               </tr>
@@ -233,6 +241,104 @@
                     During training, ArtiBoost alternatively performs data exploration and synthesis.
                     Even with a simple baseline, our method can boost it to outperform the previous SOTA on several
                     hand-object benchmarks.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:25px;width:30%;vertical-align:middle">
+                  <div class="one">
+                    <img src='images/DART.png' width="200">
+                  </div>
+                </td>
+                <td style="padding:25px;width:70%;vertical-align:middle">
+                  <a href="#">
+                    <papertitle>DART: Articulated Hand Model with Diverse Accessories and Rich Textures
+                    </papertitle>
+                  </a>
+                  <br>
+                  <a>Daiheng Gao</a>*,
+                  <a href="https://xiuyuliang.cn">Yuliang Xiu</a>*,
+                  <strong>Kailin Li</strong>*,
+                  <a href="https://lixiny.github.io">Lixin Yang</a>*,
+                  <br>
+                  <a>Feng Wang</a>, <a>Peng Zhang</a>, <a>Bang Zhang</a>,
+                  <a href="https://www.mvig.org">Cewu Lu</a>,
+                  <a href="https://www.cs.sfu.ca/~pingtan/">Ping Tan</a>
+                  <br>
+                  (*=equal contribution)
+                  <br>
+                  <strong><em>NeurIPS</em>, 2022</strong> <em> - Datasets and Benchmarks Track</em>
+                  <br>
+                  <a href="https://dart20220.github.io">project (dataset)</a>
+                  /
+                  <a href="https://openreview.net/forum?id=FPgCB_Z_0O">paper</a>
+                  /
+                  <a href="#">arxiv</a>
+                  /
+                  <a href="https://github.com/DART2022/DARTset">code</a>
+                  /
+                  <a href=https://www.youtube.com/watch?v=VvlUYe-9b7U&feature=youtu.be">video</a>
+                  <p></p>
+                  <p>
+                    In this paper, we extend MANO with more Diverse Accessories and Rich Textures, namely DART.
+                    DART is comprised of 325 exquisite hand-crafted texture maps which vary in appearance and cover
+                    different kinds of blemishes, make-ups, and accessories.
+                    We also generate large-scale (800K), diverse, and high-fidelity hand images, paired with
+                    perfect-aligned 3D labels, called DARTset.
+                  </p>
+                </td>
+              </tr>
+
+
+              <tr onmouseout="refnerf_stop()" onmouseover="refnerf_start()">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='refnerf_image'><video width=100% height=100% muted autoplay loop>
+                        <source src="images/Color_NeuS_ghostbear.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video></div>
+                    <img src='images/Color_NeuS_ghostbear.mp4' width="160">
+                  </div>
+                  <script type="text/javascript">
+                    function refnerf_start() {
+                      document.getElementById('refnerf_image').style.opacity = "0";
+                    }
+
+                    function refnerf_stop() {
+                      document.getElementById('refnerf_image').style.opacity = "0";
+                    }
+                    refnerf_stop()
+                  </script>
+                </td>
+                <td style="padding:25px;width:70%;vertical-align:middle">
+                  <a href="#">
+                    <papertitle>Color-NeuS: Reconstructing Neural Implicit Surfaces with Color
+                    </papertitle>
+                  </a>
+                  <br>
+                  <a>Licheng Zhong</a>*,
+                  <a href="">Lixin Yang</a>*,
+                  <strong>Kailin Li</strong>,
+                  <a href="">Haoyu Zhen</a>
+                  <a href="">Mei Han</a>,
+                  <a href="https://www.mvig.org">Cewu Lu</a>,
+                  <br>
+                  <strong><em>3DV</em>, 2024</strong>
+                  <br>
+                  <a href="https://colmar-zlicheng.github.io/color_neus/">project page</a>
+                  /
+                  <a href="https://arxiv.org/abs/2308.06962">arxiv</a>
+                  /
+                  <a href="https://github.com/Colmar-zlicheng/Color-NeuS">code</a>
+                  /
+                  <a href=https://drive.google.com/drive/folders/1C6vcRiy_MFMtsaR8AydRAPrLIkok-tJm">data</a>
+                  <p></p>
+                  <p>
+                    Color-NeuS focuses on mesh reconstruction with color. We remove view-dependent color while using a
+                    relighting network to maintain volume rendering performance. Mesh is extracted from the SDF network,
+                    and vertex color is derived from the global color network. We conceived a in hand object scanning
+                    task and gathered several videos for it to evaluate Color-NeuS.
+                  </p>
                 </td>
               </tr>
 
