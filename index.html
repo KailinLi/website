@@ -89,14 +89,15 @@
                       </video></div> -->
                     <!-- <img src='images/FAVOR_dataset_cut.mp4' width="100%">
                      -->
-                    <video width="100%" muted autoplay loop>
-                      <source src="images/FAVOR_dataset_cut.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
+                    <div class="two" id='favor_video'><video width="100%" muted autoplay loop>
+                        <source src="images/FAVOR_dataset_cut.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video></div>
+                    <img src='images/FAVOR_dataset_cut.jpg' width="100%">
                   </div>
                   <script type="text/javascript">
                     function favor_start() {
-                      document.getElementById('favor_video').style.opacity = "0";
+                      document.getElementById('favor_video').style.opacity = "1";
                     }
 
                     function favor_stop() {
@@ -152,17 +153,19 @@
                       </video></div> -->
                     <!-- <img src='images/chord_teaser.mp4' width="100%">
                   </div> -->
-                    <video width="100%" muted autoplay loop>
-                      <source src="images/chord_teaser.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
+                    <div class="two" id='chord_video'><video width="100%" muted autoplay loop>
+                        <source src="images/chord_teaser.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <img src='images/chord_teaser.jpg' width="100%">
                     <script type="text/javascript">
                       function chord_start() {
-                        document.getElementById('chord_image').style.opacity = "0";
+                        document.getElementById('chord_video').style.opacity = "1";
                       }
 
                       function chord_stop() {
-                        document.getElementById('chord_image').style.opacity = "0";
+                        document.getElementById('chord_video').style.opacity = "0";
                       }
                       chord_stop()
                     </script>
@@ -363,18 +366,20 @@
               <tr onmouseout="refnerf_stop()" onmouseover="refnerf_start()">
                 <td style="padding:5%;width:25%;vertical-align:middle;text-align: center;">
                   <div class="one">
-                    <video width="100%" muted autoplay loop>
-                      <source src="images/Color_NeuS_ghostbear.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
+                    <div class="two" id='colorneus_video'><video width="100%" muted autoplay loop>
+                        <source src="images/Color_NeuS_ghostbear.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video></div>
+                    <img src='images/Color_NeuS_ghostbear.jpg' width="100%">
+                  </div>
                   </div>
                   <script type="text/javascript">
                     function refnerf_start() {
-                      document.getElementById('refnerf_image').style.opacity = "0";
+                      document.getElementById('colorneus_video').style.opacity = "1";
                     }
 
                     function refnerf_stop() {
-                      document.getElementById('refnerf_image').style.opacity = "0";
+                      document.getElementById('colorneus_video').style.opacity = "0";
                     }
                     refnerf_stop()
                   </script>
@@ -681,9 +686,9 @@
               <tr>
                 <!-- <td style="padding:20px;width:25%;vertical-align:middle"><img src="images/cvf.jpg"></td> -->
                 <td width="75%" valign="center">
-                  Conference reviewer for <strong>CVPR 2024</strong>, <strong>CVPR 2022</strong>, <strong>ECCV
-                    2022</strong>, <strong>ICCV
-                    2023</strong>, and <strong>3DV 2022</strong>.
+                  Conference reviewer for <strong>CVPR 2024</strong>, <strong>ICCV
+                    2023</strong>, <strong>ECCV
+                    2022</strong>, <strong>CVPR 2022</strong>, and <strong>3DV 2022</strong>.
                   <!-- <a href="https://cvpr2022.thecvf.com/area-chairs">Area Chair, CVPR 2022</a>
                   <br>
                   <a href="http://cvpr2021.thecvf.com/area-chairs">Area Chair & Longuet-Higgins Award Committee Member,
