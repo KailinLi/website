@@ -66,7 +66,7 @@
             <tbody>
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading>Research</heading>
+                  <heading>Publications</heading>
                   <p>
                     <!-- I'm interested in computer vision, machine learning, optimization, and image processing. Much of my
                     research is about inferring the physical world (shape, motion, color, light, etc) from images.
@@ -80,20 +80,68 @@
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
 
-              <tr onmouseout="favor_stop()" onmouseover="favor_start()">
+              <tr onmouseout="semgrasp_stop()" onmouseover="semgrasp_start()">
                 <td style="padding:5%;width:25%;vertical-align:middle">
                   <div class="one">
-                    <!-- <div class="two" id='favor_video'><video width=100% height=100% muted autoplay loop>
+                    <!-- <div class="two" id='semgrasp_video'><video width="100%" muted autoplay loop>
                         <source src="images/FAVOR_dataset_cut.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video></div> -->
-                    <!-- <img src='images/FAVOR_dataset_cut.mp4' width="100%">
-                     -->
-                    <div class="two" id='favor_video'><video width="100%" muted autoplay loop>
+                    <img src='images/semgrasp_teaser.png' width="110%">
+                  </div>
+                  <!-- <script type="text/javascript">
+                    function favor_start() {
+                      document.getElementById('favor_video').style.opacity = "1";
+                    }
+
+                    function favor_stop() {
+                      document.getElementById('favor_video').style.opacity = "0";
+                    }
+                    favor_stop()
+                  </script> -->
+                </td>
+                <td style="padding:0px;width:75%;vertical-align:middle">
+                  <a href="#">
+                    <papertitle><span style="font-variant: small-caps;">SemGrasp</span>: Semantic Grasp Generation via
+                      Language Aligned Discretization
+                    </papertitle>
+                  </a>
+                  <br>
+                  <strong>Kailin Li</strong>,
+                  <a href="https://scholar.google.com/citations?hl=en&user=GStTsxAAAAAJ">Jingbo Wang</a>,
+                  <a href="https://lixiny.github.io">Lixin Yang</a>,
+                  <a href="https://www.mvig.org">Cewu Lu</a>,
+                  <a href="http://daibo.info">Bo Dai</a>
+                  <!-- <br>
+                  <strong><em>AAAI</em>, 2024</strong> -->
+                  <br>
+                  <a href="https://kailinli.github.io/SemGrasp/">project page</a>
+                  /
+                  <a href="https://arxiv.org/abs/2404.03590">arxiv</a>
+                  <p></p>
+                  <p>
+                    Generating human grasps involves both object geometry and semantic cues. This paper introduces
+                    <span style="font-variant: small-caps;">SemGrasp</span>, a method that infuses semantic information
+                    into grasp generation, aligning with language
+                    instructions. Leveraging a unified semantic framework and a Multimodal Large Language Model (MLLM),
+                    <span style="font-variant: small-caps;">SemGrasp</span> is supported by <span
+                      style="font-variant: small-caps;">CapGrasp</span>, a dataset
+                    featuring detailed captions and diverse grasps.
+                    Experiments demonstrate <span style="font-variant: small-caps;">SemGrasp</span>'s ability to produce
+                    grasps consistent with linguistic intentions,
+                    surpassing shape-only approaches.
+                  </p>
+                </td>
+              </tr>
+
+              <tr onmouseout="favor_stop()" onmouseover="favor_start()">
+                <td style="padding:5%;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='favor_video'><video width="110%" muted autoplay loop>
                         <source src="images/FAVOR_dataset_cut.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video></div>
-                    <img src='images/FAVOR_dataset_cut.jpg' width="100%">
+                    <img src='images/favor_start.png' width="110%">
                   </div>
                   <script type="text/javascript">
                     function favor_start() {
@@ -122,24 +170,24 @@
                   <a href="">Pengxiang Zhu</a>,
                   <a href="">Wenxiong Kang</a>,
                   <a href="">Kejian Wu</a>,
-                  <a href="https://www.mvig.org">Cewu Lu</a>,
+                  <a href="https://www.mvig.org">Cewu Lu</a>
                   <br>
                   <strong><em>AAAI</em>, 2024</strong>
                   <br>
-                  <a href="">project page</a>
-                  /
-                  <a href="">arxiv</a>
+                  <a href="https://kailinli.github.io/FAVOR/">project page</a>
+                  <!-- /
+                  <a href="">arxiv</a> -->
                   <p></p>
                   <p>
-                    Rearrangement operations form the crux of interactions between humans and their environment. The
-                    ability to generate natural, fluid sequences of this operation is of essential value in AR/VR and
-                    CG. Bridging a gap in the field, our study introduces <span
-                      style="font-variant: small-caps;">Favor</span>: a novel dataset for Full-body
-                    AR-driven Virtual Object Rearrangement that uniquely employs motion capture systems and AR
-                    eyeglasses. We also present a pipeline <span style="font-variant: small-caps;">Favorite</span> for
-                    producing digital human rearrangement motion sequences guided by instructions. Experimental results,
-                    both qualitative and quantitative, suggest that this dataset and pipeline deliver high-quality
-                    motion sequences.
+                    Rearranging objects is key in human-environment interaction, and creating natural sequences of such
+                    motions is crucial in AR/VR and CG. Our work presents <span
+                      style="font-variant: small-caps;">Favor</span>, a unique dataset that captures
+                    full-body virtual object rearrangement motions through motion capture and AR glasses. We also
+                    introduce a new pipeline, <span style="font-variant: small-caps;">Favorite</span>, for generating
+                    lifelike digital human rearrangement motions
+                    driven by commands. Our experiments show that <span style="font-variant: small-caps;">Favor</span>
+                    and <span style="font-variant: small-caps;">Favorite</span> produce high-fidelity motion
+                    sequences.
                   </p>
                 </td>
               </tr>
@@ -153,12 +201,12 @@
                       </video></div> -->
                     <!-- <img src='images/chord_teaser.mp4' width="100%">
                   </div> -->
-                    <div class="two" id='chord_video'><video width="100%" muted autoplay loop>
+                    <div class="two" id='chord_video'><video width="110%" muted autoplay loop>
                         <source src="images/chord_teaser.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                     </div>
-                    <img src='images/chord_teaser.jpg' width="100%">
+                    <img src='images/chord_before.png' width="110%">
                     <script type="text/javascript">
                       function chord_start() {
                         document.getElementById('chord_video').style.opacity = "1";
@@ -185,7 +233,7 @@
                   <a href="">Licheng Zhong</a>,
                   <a href="">Jian Xu</a>,
                   <a href="">Kejian Wu</a>,
-                  <a href="https://www.mvig.org">Cewu Lu</a>,
+                  <a href="https://www.mvig.org">Cewu Lu</a>
                   <br>
                   <strong><em>ICCV</em>, 2023</strong>
                   <br>
@@ -362,15 +410,72 @@
                 </td>
               </tr>
 
+              <tr onmouseout="oakink2_stop()" onmouseover="oakink2_start()">
+                <td style="padding:5%;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <!-- <div class="two" id='favor_video'><video width="100%" muted autoplay loop>
+                        <source src="images/FAVOR_dataset_cut.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video></div> -->
+                    <div class="two" id="oakink2_img">
+                      <img src='images/oakink2_after.png' width="110%">
+                    </div>
+                    <img src='images/oakink2_begin.png' width="110%">
+                  </div>
+                  <script type="text/javascript">
+                    function oakink2_start() {
+                      document.getElementById('oakink2_img').style.opacity = "1";
+                    }
+
+                    function oakink2_stop() {
+                      document.getElementById('oakink2_img').style.opacity = "0";
+                    }
+                    oakink2_stop()
+                  </script>
+                </td>
+                <td style="padding:0px;width:75%;vertical-align:middle">
+                  <a href="#">
+                    <papertitle>OAKINK2: A Dataset of Bimanual Hands-Object Manipulation in Complex Task Completion
+                    </papertitle>
+                  </a>
+                  <br>
+                  <a href="">Xinyu Zhan</a>*,
+                  <a href="">Lixin Yang</a>*,
+                  <a href="">Yifei Zhao</a>,
+                  <a href="">Kangrui Mao</a>,
+                  <a href="">Hanlin Xu</a>,
+                  <a href="">Zenan Lin</a>,
+                  <strong>Kailin Li</strong>,
+                  <a href="https://www.mvig.org">Cewu Lu</a>
+                  <br>
+                  <strong><em>CVPR</em>, 2024</strong>
+                  <br>
+                  <a href="https://oakink.net/v2/">project page</a>
+                  /
+                  <a href="https://arxiv.org/abs/2403.19417">arxiv</a>
+                  <p></p>
+                  <p>
+                    OAKINK2 is a rich dataset focusing on bimanual object manipulation tasks involved in complex daily
+                    activities. It introduces a unique three-tiered abstraction structure—Affordance, Primitive Task,
+                    and Complex Task—to systematically organize task representations. By emphasizing an object-centric
+                    approach, the dataset captures multi-view imagery and precise annotations of human and object poses,
+                    aiding in applications like interaction reconstruction and motion synthesis. Furthermore, we propose
+                    a Complex Task Completion framework that utilizes Large Language Models to break down complex
+                    activities into Primitive Tasks and a Motion Fulfillment Model to generate corresponding bimanual
+                    motions.
+                  </p>
+                </td>
+              </tr>
+
 
               <tr onmouseout="refnerf_stop()" onmouseover="refnerf_start()">
                 <td style="padding:5%;width:25%;vertical-align:middle;text-align: center;">
                   <div class="one">
-                    <div class="two" id='colorneus_video'><video width="100%" muted autoplay loop>
+                    <div class="two" id='colorneus_video'><video width="110%" muted autoplay loop>
                         <source src="images/Color_NeuS_ghostbear.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video></div>
-                    <img src='images/Color_NeuS_ghostbear.jpg' width="100%">
+                    <img src='images/Color_NeuS_ghostbear.jpg' width="110%">
                   </div>
                   </div>
                   <script type="text/javascript">
@@ -688,6 +793,7 @@
                 <td width="75%" valign="center">
                   Conference reviewer for <strong>CVPR 2024</strong>, <strong>ICCV
                     2023</strong>, <strong>ECCV
+                    2024</strong>, <strong>ECCV
                     2022</strong>, <strong>CVPR 2022</strong>, and <strong>3DV 2022</strong>.
                   <!-- <a href="https://cvpr2022.thecvf.com/area-chairs">Area Chair, CVPR 2022</a>
                   <br>
