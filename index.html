@@ -29,16 +29,15 @@
                   <p style="text-align:center">
                     <name>Kailin Li | 李恺林</name>
                   </p>
-                  <p>I am presently a fifth-year Ph.D. student in the Department of <a style="color:#545454"
-                      href="http://www.cs.sjtu.edu.cn/en/">Computer Science</a> at <a
-                      href="http://en.sjtu.edu.cn">Shanghai Jiao Tong University</a>. As an active member of the
-                    esteemed SJTU <a href="https://www.mvig.org/">MVIG</a> lab, I work closely under the expert guidance
-                    of Prof. <strong>Cewu
-                      Lu</strong>.
-                    Before that, I acquired my Bachelor's degree (<a style="color:#545454"
-                      href="http://www.cs.hust.edu.cn/index.htm">Computer Science</a>) in 2019
-                    from <a style="color:#545454" href="http://english.hust.edu.cn">Huazhong University of Science and
-                      Technology</a>. My research pursuits predominantly revolve around <strong><em>Computer
+                  <p>
+                    I am currently a Research Scientist at the General Vision Lab of the Beijing Institute for General
+                    Artificial Intelligence (<a href="https://www.bigai.ai">BIGAI</a>). I received my Ph.D. degree in
+                    Computer Science and Technology from <a href="http://en.sjtu.edu.cn">Shanghai Jiao Tong
+                      University</a> in June 2024, where I was an active
+                    member of the SJTU <a href="https://www.mvig.org/">MVIG</a> lab under the guidance of Prof.
+                    <strong>Cewu
+                      Lu</strong>. I have also served as a research intern at Shanghai AI Lab. My research pursuits
+                    predominantly revolve around <strong><em>Computer
                         Vision</em></strong>, <strong><em>3D Vision</em></strong>, and <strong><em>Embodied
                         AI</em></strong>.
                   </p>
@@ -80,8 +79,67 @@
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
 
+              <tr onmouseout="maniptrans_stop()" onmouseover="maniptrans_start()">
+                <td style="padding:10%;width:35%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='maniptrans_video'><video width="130%" muted autoplay loop>
+                        <source src="images/maniptrans_cut.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video></div>
+                    <img src='images/maniptrans_teaser.png' width="130%">
+                  </div>
+                  <script type="text/javascript">
+                    function maniptrans_start() {
+                      document.getElementById('maniptrans_video').style.opacity = "1";
+                    }
+
+                    function maniptrans_stop() {
+                      document.getElementById('maniptrans_video').style.opacity = "0";
+                    }
+                    maniptrans_stop()
+                  </script>
+                </td>
+                <td style="padding:0px;width:55%;vertical-align:middle">
+                  <a href="#">
+                    <papertitle><span style="font-variant: small-caps;">ManipTrans</span>: Efficient Dexterous Bimanual
+                      Manipulation Transfer via Residual Learning
+                    </papertitle>
+                  </a>
+                  <br>
+                  <strong>Kailin Li</strong>,
+                  <a href="https://xiaoyao-li.github.io/">Puhao Li</a>,
+                  <a href="https://tengyu.ai/">Tengyu Liu</a>,
+                  <a href="https://yuyangli.com/">Yuyang Li</a>,
+                  <a href="https://siyuanhuang.com/">Siyuan Huang</a>
+                  <br>
+                  <strong><em>CVPR</em>, 2025</strong> &nbsp
+                  <!-- <font color="red"><strong>(Oral Presentation)</strong> -->
+                  <!-- </font> -->
+                  <br>
+                  <a href="https://maniptrans.github.io/">project page</a>
+                  /
+                  <a href="">arxiv</a>
+                  /
+                  <a href="https://github.com/ManipTrans/ManipTrans">Github</a>
+                  <p></p>
+                  <p>
+                    Our objective is to develop a policy that enables dexterous robotic hands to replicate human hands
+                    accurately–object interaction trajectories in simulation while satisfying the tasks' semantic
+                    manipulation constraints. The key innovation of <span
+                      style="font-variant: small-caps;">ManipTrans</span> is to frame this transfer as a
+                    two-stage
+                    process: first, a pre-training trajectory imitation stage focusing solely on hand motion, and
+                    second, a specific action fine-tuning stage that addresses interaction constraints. By leveraging
+                    <span style="font-variant: small-caps;">>ManipTrans</span>, we transfer multiple hand–object
+                    datasets to robotic hands, creating <span style="font-variant: small-caps;">DexManipNet</span>—a
+                    large-scale dataset featuring previously unexplored tasks such as pen capping and bottle unscrewing,
+                    that facilitate further policy training for dexterous hands and enabling real-world deployments.
+                  </p>
+                </td>
+              </tr>
+
               <tr onmouseout="semgrasp_stop()" onmouseover="semgrasp_start()">
-                <td style="padding:5%;width:25%;vertical-align:middle">
+                <td style="padding:10%;width:35%;vertical-align:middle">
                   <div class="one">
                     <!-- <div class="two" id='semgrasp_video'><video width="100%" muted autoplay loop>
                         <source src="images/FAVOR_dataset_cut.mp4" type="video/mp4">
@@ -100,7 +158,7 @@
                     favor_stop()
                   </script> -->
                 </td>
-                <td style="padding:0px;width:75%;vertical-align:middle">
+                <td style="padding:0px;width:55%;vertical-align:middle">
                   <a href="#">
                     <papertitle><span style="font-variant: small-caps;">SemGrasp</span>: Semantic Grasp Generation via
                       Language Aligned Discretization
@@ -138,13 +196,13 @@
               </tr>
 
               <tr onmouseout="favor_stop()" onmouseover="favor_start()">
-                <td style="padding:5%;width:25%;vertical-align:middle">
+                <td style="padding:10%;width:35%;vertical-align:middle">
                   <div class="one">
-                    <div class="two" id='favor_video'><video width="110%" muted autoplay loop>
+                    <div class="two" id='favor_video'><video width="120%" muted autoplay loop>
                         <source src="images/FAVOR_dataset_cut.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video></div>
-                    <img src='images/favor_start.png' width="110%">
+                    <img src='images/favor_start.png' width="120%">
                   </div>
                   <script type="text/javascript">
                     function favor_start() {
@@ -157,7 +215,7 @@
                     favor_stop()
                   </script>
                 </td>
-                <td style="padding:0px;width:75%;vertical-align:middle">
+                <td style="padding:0px;width:55%;vertical-align:middle">
                   <a href="#">
                     <papertitle><span style="font-variant: small-caps;">Favor</span>: Full-Body AR-Driven Virtual Object
                       Rearrangement Guided by Instruction Text
@@ -196,7 +254,7 @@
               </tr>
 
               <tr onmouseout="chord_stop()" onmouseover="chord_start()">
-                <td style="padding:5%;width:25%;vertical-align:middle">
+                <td style="padding:10%;width:35%;vertical-align:middle">
                   <div class="one">
                     <!-- <div class="two" id='chord_image'><video width=100% height=100% muted autoplay loop>
                         <source src="images/chord_teaser.mp4" type="video/mp4">
@@ -221,7 +279,7 @@
                       chord_stop()
                     </script>
                 </td>
-                <td style="padding:0px;width:75%;vertical-align:middle">
+                <td style="padding:0px;width:55%;vertical-align:middle">
                   <a href="#">
                     <papertitle><span style="font-variant: small-caps;">Chord</span>: Category-level in-Hand Object
                       Reconstruction via Shape Deformation
@@ -260,7 +318,7 @@
               </tr>
 
               <tr onmouseout="oakink_stop()" onmouseover="oakink_start()">
-                <td style="padding:5%;width:25%;vertical-align:middle;text-align: center;">
+                <td style="padding:10%;width:35%;vertical-align:middle;text-align: center;">
                   <div class="one">
                     <div class="two" id='oakink_image'>
                       <img src='images/oakink_after.png' width="110%">
@@ -278,7 +336,7 @@
                     oakink_stop()
                   </script>
                 </td>
-                <td style="padding:0px;width:75%;vertical-align:middle">
+                <td style="padding:0px;width:55%;vertical-align:middle">
                   <a href="#">
                     <papertitle>OakInk: A Large-scale Knowledge Repository for Understanding Hand-Object Interaction
                     </papertitle>
@@ -316,7 +374,7 @@
               </tr>
 
               <tr onmouseout="artiboost_stop()" onmouseover="artiboost_start()">
-                <td style="padding:5%;width:25%;vertical-align:middle;text-align: center;">
+                <td style="padding:10%;width:35%;vertical-align:middle;text-align: center;">
                   <div class="one">
                     <div class="two" id='artiboost_image'>
                       <img src='images/artiboost_after.jpg' width="110%">
@@ -334,7 +392,7 @@
                     artiboost_stop()
                   </script>
                 </td>
-                <td style="padding:0px;width:75%;vertical-align:middle">
+                <td style="padding:0px;width:55%;vertical-align:middle">
                   <a href="#">
                     <papertitle>ArtiBoost: Boosting Articulated 3D Hand-Object Pose Estimation via Online Exploration
                       and Synthesis
@@ -371,12 +429,12 @@
               </tr>
 
               <tr>
-                <td style="padding:5%;width:25%;vertical-align:middle;text-align: center;">
+                <td style="padding:10%;width:35%;vertical-align:middle;text-align: center;">
                   <div class="one">
                     <img src='images/DART.png' width="110%">
                   </div>
                 </td>
-                <td style="padding:0px;width:75%;vertical-align:middle">
+                <td style="padding:0px;width:55%;vertical-align:middle">
                   <a href="#">
                     <papertitle>DART: Articulated Hand Model with Diverse Accessories and Rich Textures
                     </papertitle>
@@ -416,7 +474,7 @@
               </tr>
 
               <tr onmouseout="oakink2_stop()" onmouseover="oakink2_start()">
-                <td style="padding:5%;width:25%;vertical-align:middle">
+                <td style="padding:10%;width:35%;vertical-align:middle">
                   <div class="one">
                     <!-- <div class="two" id='favor_video'><video width="100%" muted autoplay loop>
                         <source src="images/FAVOR_dataset_cut.mp4" type="video/mp4">
@@ -438,7 +496,7 @@
                     oakink2_stop()
                   </script>
                 </td>
-                <td style="padding:0px;width:75%;vertical-align:middle">
+                <td style="padding:0px;width:55%;vertical-align:middle">
                   <a href="#">
                     <papertitle>OAKINK2: A Dataset of Bimanual Hands-Object Manipulation in Complex Task Completion
                     </papertitle>
@@ -474,7 +532,7 @@
 
 
               <tr onmouseout="refnerf_stop()" onmouseover="refnerf_start()">
-                <td style="padding:5%;width:25%;vertical-align:middle;text-align: center;">
+                <td style="padding:10%;width:35%;vertical-align:middle;text-align: center;">
                   <div class="one">
                     <div class="two" id='colorneus_video'><video width="110%" muted autoplay loop>
                         <source src="images/Color_NeuS_ghostbear.mp4" type="video/mp4">
@@ -494,7 +552,7 @@
                     refnerf_stop()
                   </script>
                 </td>
-                <td style="padding:0px;width:75%;vertical-align:middle">
+                <td style="padding:0px;width:55%;vertical-align:middle">
                   <a href="#">
                     <papertitle>Color-NeuS: Reconstructing Neural Implicit Surfaces with Color
                     </papertitle>
@@ -527,7 +585,7 @@
               </tr>
 
               <tr onmouseout="cpf_stop()" onmouseover="cpf_start()">
-                <td style="padding:5%;width:25%;vertical-align:middle;text-align: center;">
+                <td style="padding:10%;width:35%;vertical-align:middle;text-align: center;">
                   <div class="one">
                     <div class="two" id='cpf_image'>
                       <img src='images/cpf_after.png' width="110%">
@@ -545,7 +603,7 @@
                     cpf_stop()
                   </script>
                 </td>
-                <td style="padding:0px;width:75%;vertical-align:middle">
+                <td style="padding:0px;width:55%;vertical-align:middle">
                   <a href="https://lixiny.github.io/CPF">
                     <papertitle>CPF: Learning a Contact Potential Field to Model the Hand-Object Interaction
                     </papertitle>
@@ -586,7 +644,7 @@
               </tr>
 
               <!-- <tr onmouseout="refnerf_stop()" onmouseover="refnerf_start()">
-                <td style="padding:20px;width:25%;vertical-align:middle">
+                <td style="padding:20px;width:35%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='refnerf_image'><video width=100% height=100% muted autoplay loop>
                         <source src="images/refnerf.mp4" type="video/mp4">
@@ -605,7 +663,7 @@
                     refnerf_stop()
                   </script>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:middle">
+                <td style="padding:20px;width:55%;vertical-align:middle">
                   <a href="https://dorverbin.github.io/refnerf/index.html">
                     <papertitle>Ref-NeRF: Structured View-Dependent Appearance for Neural Radiance Fields</papertitle>
                   </a>
@@ -633,7 +691,7 @@
               <tr>
 
               <tr onmouseout="mipnerf_stop()" onmouseover="mipnerf_start()" bgcolor="#ffffd0">
-                <td style="padding:20px;width:25%;vertical-align:middle">
+                <td style="padding:20px;width:35%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='mipnerf_image'><video width=100% height=100% muted autoplay loop>
                         <source src="images/mipnerf_ipe_yellow.mp4" type="video/mp4">
@@ -652,7 +710,7 @@
                     mipnerf_stop()
                   </script>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:middle">
+                <td style="padding:20px;width:55%;vertical-align:middle">
                   <a href="http://jonbarron.info/mipnerf">
                     <papertitle>Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields
                     </papertitle>
@@ -682,7 +740,7 @@
               </tr>
 
               <tr onmouseout="survey_stop()" onmouseover="survey_start()">
-                <td style="padding:20px;width:25%;vertical-align:middle">
+                <td style="padding:20px;width:35%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='survey_image'>
                       <img src='images/survey_after.png' width="160">
@@ -700,7 +758,7 @@
                     survey_stop()
                   </script>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:middle">
+                <td style="padding:20px;width:55%;vertical-align:middle">
                   <a href="https://arxiv.org/abs/2111.05849">
                     <papertitle>Advances in Neural Rendering</papertitle>
                   </a>
@@ -734,7 +792,7 @@
               </tr>
 
               <tr onmouseout="jump_stop()" onmouseover="jump_start()" bgcolor="#ffffd0">
-                <td style="padding:20px;width:25%;vertical-align:middle">
+                <td style="padding:20px;width:35%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='jump_image'><img src='images/jump_anim.gif'></div>
                     <img src='images/jump_still.png'>
@@ -750,7 +808,7 @@
                     jump_stop()
                   </script>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:middle">
+                <td style="padding:20px;width:55%;vertical-align:middle">
                   <a href="https://drive.google.com/file/d/1RBnTrtzqmuO8uj3GQaR5vBJZjIC3Jxjn/view?usp=sharing">
                     <papertitle>Jump: Virtual Reality Video</papertitle>
                   </a>
@@ -794,12 +852,12 @@
           <table width="100%" align="center" border="0" cellpadding="20">
             <tbody>
               <tr>
-                <!-- <td style="padding:20px;width:25%;vertical-align:middle"><img src="images/cvf.jpg"></td> -->
+                <!-- <td style="padding:20px;width:35%;vertical-align:middle"><img src="images/cvf.jpg"></td> -->
                 <td width="75%" valign="center">
-                  Conference reviewer for <strong>CVPR 2024</strong>, <strong>ICCV
-                    2023</strong>, <strong>ECCV
-                    2024</strong>, <strong>ECCV
-                    2022</strong>, <strong>CVPR 2022</strong>, and <strong>3DV 2022</strong>.
+                  Conference reviewer for <strong>ICLR 2025</strong>,<strong>ICML 2025</strong>,<strong>NeurIPS
+                    2024</strong>,<strong>CVPR 2025</strong>,<strong>CVPR 2024</strong>,<strong>CVPR
+                    2022</strong>,<strong>ICCV 2023</strong>,<strong>ECCV 2024</strong>, <strong>ECCV 2022</strong>,
+                  <strong>AAAI 2025</strong>, <strong>3DV 2022</strong>.
                   <!-- <a href="https://cvpr2022.thecvf.com/area-chairs">Area Chair, CVPR 2022</a>
                   <br>
                   <a href="http://cvpr2021.thecvf.com/area-chairs">Area Chair & Longuet-Higgins Award Committee Member,
@@ -811,7 +869,7 @@
                 </td>
               </tr>
               <!-- <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
+                <td style="padding:20px;width:35%;vertical-align:middle">
                   <img src="images/cs188.jpg" alt="cs188">
                 </td>
                 <td width="75%" valign="center">
@@ -827,7 +885,7 @@
               </tr>
 
               <tr>
-                <td align="center" style="padding:20px;width:25%;vertical-align:middle">
+                <td align="center" style="padding:20px;width:35%;vertical-align:middle">
                   <heading>Basically <br> Blog Posts</heading>
                 </td>
                 <td width="75%" valign="middle">
