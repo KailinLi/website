@@ -44,7 +44,7 @@
 
 
                   <p style="text-align:center">
-                    <a href="mailto:kailinli@sjtu.edu.cn">Email</a> &nbsp/&nbsp
+                    <span id="email-link"></span> &nbsp;/&nbsp;
                     <!-- <a href="data/JonBarron-CV.pdf">CV</a> &nbsp/&nbsp -->
                     <!-- <a href="data/JonBarron-bio.txt">Bio</a> &nbsp/&nbsp -->
                     <a href="https://scholar.google.com/citations?user=zEDPB2MAAAAJ">Google Scholar</a>
@@ -52,6 +52,19 @@
                     <!-- <a href="https://twitter.com/jon_barron">Twitter</a> &nbsp/&nbsp -->
                     <a href="https://github.com/KailinLi">Github</a>
                   </p>
+                  <script>
+                    (function () {
+                      const encoded = "a2FpbGlubGlAc2p0dS5lZHUuY24=";
+                      const email = atob(encoded);
+                      const holder = document.getElementById("email-link");
+                      if (holder) {
+                        const link = document.createElement("a");
+                        link.href = `mailto:${email}`;
+                        link.textContent = "Email";
+                        holder.appendChild(link);
+                      }
+                    })();
+                  </script>
                 </td>
                 <td style="padding:2.5%;width:40%;max-width:40%">
                   <a href="images/kailin-new.png"><img style="width:100%;max-width:100%" alt="profile photo"
