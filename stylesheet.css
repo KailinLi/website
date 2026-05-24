@@ -264,6 +264,25 @@ strong {
   color: #ffffff;
 }
 
+.gallery-tile::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0;
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.62), transparent),
+    linear-gradient(135deg, #edf3f6, #dce7ed);
+  background-size: 220% 100%, 100% 100%;
+  content: "";
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.gallery-tile.is-loading::before {
+  opacity: 1;
+  animation: gallery-shimmer 1.15s ease-in-out infinite;
+}
+
 .gallery-tile.tone-highlight {
   --gallery-outline: rgba(183, 121, 31, 0.44);
 }
@@ -295,9 +314,18 @@ strong {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  opacity: 0;
+  object-fit: contain;
   object-position: center;
-  transition: transform 220ms ease, filter 220ms ease;
+  transition: opacity 180ms ease, filter 220ms ease;
+}
+
+.gallery-tile.is-loaded img {
+  opacity: 1;
+}
+
+.gallery-tile.has-image-error img {
+  opacity: 0;
 }
 
 .gallery-title {
@@ -305,6 +333,7 @@ strong {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 2;
   display: block;
   max-height: 72%;
   padding: 10px 12px;
@@ -319,10 +348,19 @@ strong {
   transition: opacity 180ms ease, transform 180ms ease;
 }
 
+@keyframes gallery-shimmer {
+  0% {
+    background-position: 180% 0, 0 0;
+  }
+
+  100% {
+    background-position: -80% 0, 0 0;
+  }
+}
+
 .gallery-tile:hover img,
 .gallery-tile:focus img {
   filter: saturate(1.08) contrast(1.04);
-  transform: scale(1.035);
 }
 
 .gallery-tile:hover .gallery-title,
@@ -584,8 +622,13 @@ strong {
   .publication-card,
   .media-hover,
   .gallery-tile img,
-  .gallery-title {
+  .gallery-title,
+  .gallery-tile::before {
     transition: none;
+  }
+
+  .gallery-tile.is-loading::before {
+    animation: none;
   }
 
   .publication-card:hover,

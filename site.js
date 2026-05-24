@@ -1,5 +1,6 @@
 (function () {
   const publications = window.PUBLICATIONS || [];
+  const galleryManifest = window.PUBLICATION_GALLERY || {};
   const gallery = document.getElementById("publication-gallery");
   const list = document.getElementById("publications-list");
   const emailHolder = document.getElementById("email-link");
@@ -37,6 +38,14 @@
     const template = document.createElement("template");
     template.innerHTML = html || "";
     return (template.content.textContent || "").replace(/\s+/g, " ").trim();
+  };
+
+  const sameUrl = (source, url) => {
+    try {
+      return new URL(source, document.baseURI).href === url;
+    } catch (error) {
+      return source === url;
+    }
   };
 
   const getPublicationTone = (publication) => {
@@ -119,39 +128,33 @@
 
   const galleryItems = publications.map((publication, index) => {
     const media = publication.media || {};
-    const src = media.galleryImage || media.image || media.hoverImage;
+    const fallbackSrc = media.image || media.hoverImage;
+    const generatedMedia = publication.id ? galleryManifest[publication.id] : null;
+    const usesGeneratedSrc = !media.galleryImage && generatedMedia && generatedMedia.src;
+    const src = media.galleryImage
+      || (usesGeneratedSrc && generatedMedia.src)
+      || fallbackSrc;
 
     if (!src) {
       return null;
     }
 
+    const generatedRatio = usesGeneratedSrc && generatedMedia.width && generatedMedia.height
+      ? generatedMedia.width / generatedMedia.height
+      : null;
+    const explicitGalleryRatio = media.galleryRatio ? ratioToNumber(media.galleryRatio) : null;
+
     return {
       id: publication.id,
       href: `#publication-${publication.id}`,
       src,
+      fallbackSrc,
       index,
       title: htmlToText(publication.titleHtml),
       tone: getPublicationTone(publication),
-      ratio: ratioToNumber(media.galleryRatio || media.ratio || media.listRatio)
+      ratio: explicitGalleryRatio || generatedRatio || ratioToNumber(media.ratio || media.listRatio)
     };
   }).filter(Boolean);
-
-  const readImageRatio = (item) => new Promise((resolve) => {
-    const image = new Image();
-
-    image.onload = () => {
-      const naturalRatio = image.naturalWidth && image.naturalHeight
-        ? image.naturalWidth / image.naturalHeight
-        : item.ratio;
-      resolve({ ...item, ratio: naturalRatio || item.ratio || 16 / 9 });
-    };
-
-    image.onerror = () => {
-      resolve({ ...item, ratio: item.ratio || 16 / 9 });
-    };
-
-    image.src = item.src;
-  });
 
   const splitGalleryRows = (items, availableWidth, gap, options) => {
     const count = items.length;
@@ -239,6 +242,7 @@
     const rows = splitGalleryRows(items, galleryWidth, gap, options);
 
     gallery.innerHTML = "";
+    gallery.setAttribute("aria-busy", "true");
 
     rows.forEach((row) => {
       const rowElement = document.createElement("div");
@@ -257,16 +261,38 @@
         usedWidth += width;
 
         const link = document.createElement("a");
-        link.className = `gallery-tile tone-${item.tone}`;
+        link.className = `gallery-tile tone-${item.tone} is-loading`;
         link.href = item.href;
         link.style.width = `${width}px`;
         link.setAttribute("aria-label", item.title);
 
         const image = document.createElement("img");
-        image.src = item.src;
         image.alt = item.title;
         image.loading = "lazy";
         image.decoding = "async";
+        image.sizes = "(max-width: 640px) 46vw, 24vw";
+
+        image.addEventListener("load", () => {
+          link.classList.remove("is-loading");
+          link.classList.add("is-loaded");
+        }, { once: true });
+
+        image.addEventListener("error", () => {
+          if (
+            !image.dataset.fallbackTried
+            && item.fallbackSrc
+            && !sameUrl(item.fallbackSrc, image.currentSrc || image.src)
+          ) {
+            image.dataset.fallbackTried = "true";
+            image.src = item.fallbackSrc;
+            return;
+          }
+
+          link.classList.remove("is-loading");
+          link.classList.add("is-loaded", "has-image-error");
+        });
+
+        image.src = item.src;
 
         const label = document.createElement("span");
         label.className = "gallery-title";
@@ -278,19 +304,25 @@
 
       gallery.appendChild(rowElement);
     });
+
+    gallery.setAttribute("aria-busy", "false");
   };
 
   if (gallery && galleryItems.length) {
-    Promise.all(galleryItems.map(readImageRatio)).then((items) => {
-      renderGallery(items);
+    let galleryFrame = 0;
+    const scheduleGalleryRender = () => {
+      window.cancelAnimationFrame(galleryFrame);
+      galleryFrame = window.requestAnimationFrame(() => renderGallery(galleryItems));
+    };
 
-      if ("ResizeObserver" in window) {
-        const observer = new ResizeObserver(() => renderGallery(items));
-        observer.observe(gallery);
-      } else {
-        window.addEventListener("resize", () => renderGallery(items));
-      }
-    });
+    renderGallery(galleryItems);
+
+    if ("ResizeObserver" in window) {
+      const observer = new ResizeObserver(scheduleGalleryRender);
+      observer.observe(gallery);
+    } else {
+      window.addEventListener("resize", scheduleGalleryRender);
+    }
   }
 
   publications.forEach((publication, index) => {
