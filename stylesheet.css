@@ -162,7 +162,27 @@ strong {
   font-style: normal;
 }
 
+.bio .research-focus {
+  display: inline;
+  padding: 0 4px 1px;
+  border: 1px solid rgba(37, 95, 103, 0.14);
+  border-bottom-color: rgba(37, 95, 103, 0.36);
+  border-radius: 5px;
+  background: rgba(37, 95, 103, 0.045);
+  color: #123f47;
+  font-weight: 760;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.bio .research-focus strong {
+  color: #0f3440;
+  font-weight: 850;
+}
+
 .recruiting {
+  display: grid;
+  gap: 8px;
   max-width: 780px;
   padding: 0 0 0 16px;
   border-left: 4px solid var(--warm);
@@ -170,9 +190,28 @@ strong {
   background: transparent;
 }
 
-.recruiting span {
+.recruiting-line {
   color: var(--warm);
   font-weight: 750;
+}
+
+.recruiting-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.recruiting-roles strong {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border: 1px solid rgba(180, 35, 24, 0.24);
+  border-radius: 6px;
+  background: #fff0ef;
+  color: var(--warm);
+  font-size: 14px;
+  font-weight: 820;
+  line-height: 1.45;
 }
 
 .contact-links {

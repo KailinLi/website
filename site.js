@@ -6,11 +6,29 @@
   const emailHolder = document.getElementById("email-link");
 
   if (emailHolder) {
-    const encoded = "a2FpbGlubGlAc2p0dS5lZHUuY24=";
-    const email = atob(encoded);
+    const encodedEmail = [73, 76, 78, 68, 76, 73, 76, 75, 86, 79, 81, 80, 101, 66, 72, 68, 76, 73, 11, 70, 74, 72];
+    const emailKey = 37;
+    const decodeEmail = () => String.fromCharCode(...encodedEmail.map((code) => code ^ emailKey));
     const link = document.createElement("a");
-    link.href = `mailto:${email}`;
+    let emailHref = "";
+
+    const activateEmail = () => {
+      if (!emailHref) {
+        emailHref = `mailto:${decodeEmail()}`;
+        link.href = emailHref;
+      }
+    };
+
+    link.href = "#email-link";
     link.textContent = "Email";
+    link.rel = "nofollow";
+    link.setAttribute("aria-label", "Email Kailin Li");
+
+    ["mouseenter", "focus", "touchstart", "mousedown"].forEach((eventName) => {
+      link.addEventListener(eventName, activateEmail, { once: true });
+    });
+
+    link.addEventListener("click", activateEmail);
     emailHolder.appendChild(link);
   }
 
