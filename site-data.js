@@ -256,6 +256,111 @@ window.PUBLICATIONS = [
       perfect-aligned 3D labels, called DARTset.`
   },
   {
+    id: "internvla-a15",
+    media: {
+      image: "images/internvla_a15_teaser.png",
+      video: "images/internvla_a15.mp4",
+      ratio: "2320 / 1493"
+    },
+    titleHref: "https://internrobotics.github.io/internvla-a15.github.io/",
+    titleHtml: `<span class="small-caps">InternVLA-A1.5</span>: Unifying Understanding, Latent Foresight, and Action for Compositional Generalization`,
+    authorsHtml: `<a>Haoxiang Ma</a>*, <a>Junhao Cai</a>*, <a>Xiaoxu Xu</a>*, <a>Hao Li</a>*,
+      <a>Yuyin Yang</a>*, <a>Yang Tian</a>*, <a>Jiafei Cao</a>*,
+      <br>
+      <a>Hongrui Zhu</a>, <a>Zherui Qiu</a>, <a>Zhaxizhuoma</a>, <a>Yuqiang Yang</a>,
+      <a>Jiaqi Peng</a>, <a>Xueyuan Wei</a>, <a>Yangkun Zhu</a>, <a>Jiahao Jiang</a>,
+      <a>Xing Gao</a>, <a>Hanqing Wang</a>, <a>Feng Yuan</a>, <strong>Kailin Li</strong>,
+      <a>Xueyue Zhu</a>, <a href="https://tai-wang.github.io/">Tai Wang</a>, <a>Yan Ding</a>,
+      <a href="https://oceanpang.github.io/">Jiangmiao Pang</a>, <a>Jia Zeng</a>,
+      <a>Jingjing Zhang</a>, <a>Bowen Zhou</a>, <a>Yao Mu</a>, <a>Chunhua Shen</a>,
+      <a href="https://wnzhang.net/">Weinan Zhang</a>†`,
+    venueHtml: `<strong><em>arXiv</em>, 2026</strong>`,
+    linksHtml: `<a href="https://internrobotics.github.io/internvla-a15.github.io/">project page</a>
+      /
+      <a href="https://arxiv.org/abs/2607.04988">arxiv</a>
+      /
+      <a href="https://github.com/InternRobotics/InternVLA-A-series">code</a>
+      /
+      <a href="https://huggingface.co/collections/InternRobotics/internvla-a15">models</a>
+      /
+      <a href="https://internrobotics.github.io/internvla-a15.github.io/videos/intro.mp4">video</a>`,
+    abstractHtml: `<span class="small-caps">InternVLA-A1.5</span> unifies vision-language understanding,
+      latent foresight, and continuous action generation in a single manipulation policy. A lightweight
+      action expert preserves the pretrained VLM's semantic capability, while foresight tokens learn
+      task-relevant dynamics from a frozen video generation model that is removed at inference. Trained
+      on 1.2M robot episodes and 3M multimodal samples, the model achieves strong compositional
+      generalization and long-horizon manipulation across six simulation benchmarks and real-world tasks.`
+  },
+  {
+    id: "scalebfm",
+    media: {
+      image: "images/scalebfm_teaser.png",
+      video: "images/scalebfm.mp4",
+      ratio: "1013 / 515"
+    },
+    titleHref: "https://scalebfm.github.io/",
+    titleHtml: `Scaling Behavior Foundation Model for Humanoid Robots`,
+    authorsHtml: `<a href="https://zengweishuai.github.io/">Weishuai Zeng</a>*,
+      <a href="https://yinkangning0124.github.io/">Kangning Yin</a>*,
+      <a href="https://njay12.github.io/">Xiaojie Niu</a>*,
+      <a href="https://shunlinlu.github.io/">Shunlin Lu</a>, <a>Weixiang Zhong</a>,
+      <a href="https://jiahe-chen.cn/">Jiahe Chen</a>, <a href="https://trap-1.github.io/">Feiyu Jia</a>,
+      <a href="https://xiao-chen.tech/">Xiao Chen</a>, <a>Zirui Wang</a>, <a>Furui Xu</a>,
+      <a href="https://www.mingzak.com/">Ming Zhou</a>, <strong>Kailin Li</strong>,
+      <a href="https://wnzhang.net/">Weinan Zhang</a>, <a href="https://hughw19.github.io/">He Wang</a>,
+      <a href="https://ericyi.github.io/">Li Yi</a>, <a href="https://dahua.site/">Dahua Lin</a>,
+      <a href="https://oceanpang.github.io/">Jiangmiao Pang</a>,
+      <a href="https://wangjingbo1219.github.io/">Jingbo Wang</a>`,
+    venueHtml: `<strong><em>arXiv</em>, 2026</strong>`,
+    linksHtml: `<a href="https://scalebfm.github.io/">project page</a>
+      /
+      <a href="https://arxiv.org/abs/2607.15163">arxiv</a>
+      /
+      <a href="https://github.com/zengweishuai/ScaleBFM">code</a>
+      /
+      <a href="https://scalebfm.github.io/assets/videos/webpage_teaser_4k_optimized.mp4">video</a>`,
+    abstractHtml: `<span class="small-caps">ScaleBFM</span> develops a scaling recipe for general-purpose
+      humanoid control across the learning objective, behavioral data, and model architecture. It combines
+      global-frame whole-body motion tracking, balanced scaling of on-policy rollouts and a 102M-frame
+      motion corpus, and a Humanoid Transformer that learns structured behavior representations. The
+      resulting foundation controller improves fidelity and generalization across locomotion, dexterous
+      manipulation, and whole-body loco-manipulation in simulation and on Unitree G1.`
+  },
+  {
+    id: "reactivebfm",
+    media: {
+      image: "images/reactivebfm_teaser.png",
+      video: "images/reactivebfm.mp4",
+      ratio: "639 / 303"
+    },
+    titleHref: "https://xiao-chen.tech/reactivebfm/",
+    titleHtml: `<span class="small-caps">ReactiveBFM</span>: Reactive Closed-Loop Motion Planning Towards Universal Humanoid Whole-Body Control`,
+    authorsHtml: `<a href="https://xiao-chen.tech/">Xiao Chen</a>*,
+      <a href="https://zengweishuai.github.io/">Weishuai Zeng</a>*,
+      <a href="https://njay12.github.io/">Xiaojie Niu</a>*, <a>Zirui Wang</a>*, <a>Jianan Li</a>*,
+      <a href="https://why618188.github.io/">Huayi Wang</a>, <a>Furui Xu</a>,
+      <a href="https://jiahe-chen.cn/">Jiahe Chen</a>, <a>Weixiang Zhong</a>,
+      <a href="https://dinglihe.github.io/">Lihe Ding</a>, <strong>Kailin Li</strong>,
+      <a href="https://oceanpang.github.io/">Jiangmiao Pang</a>,
+      <a href="https://tai-wang.github.io/">Tai Wang</a>,
+      <a href="http://tianfan.info/">Tianfan Xue</a>†,
+      <a href="https://wangjingbo1219.github.io/">Jingbo Wang</a>†`,
+    venueHtml: `<strong><em>arXiv</em>, 2026</strong>`,
+    linksHtml: `<a href="https://xiao-chen.tech/reactivebfm/">project page</a>
+      /
+      <a href="https://arxiv.org/abs/2606.30362">arxiv</a>
+      /
+      <a href="https://github.com/zjwzcx/ReactiveBFM">code</a>
+      /
+      <a href="https://xiao-chen.tech/reactivebfm/videos/highlight.mp4">video</a>`,
+    abstractHtml: `<span class="small-caps">ReactiveBFM</span> turns a humanoid behavior foundation model
+      into a real-time closed-loop planning-control system. Scheduled prefix sampling trains the motion
+      planner to recover from imperfect tracked states, while asynchronous replanning and trajectory
+      chunking reconcile generative planning with 50 Hz control. On Unitree G1, the system supports
+      streaming text control, disturbance recovery, and zero-shot moving-target reaching, achieving 93.1%
+      success under severe sim-to-sim perturbations.`
+  },
+  {
     id: "telecatch",
     media: {
       image: "images/telecatch.png",
