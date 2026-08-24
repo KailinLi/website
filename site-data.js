@@ -256,6 +256,43 @@ window.PUBLICATIONS = [
       perfect-aligned 3D labels, called DARTset.`
   },
   {
+    id: "adapt",
+    media: {
+      image: "images/adapt_teaser.webp",
+      video: "images/adapt.mp4",
+      ratio: "1400 / 883"
+    },
+    titleHref: "https://humanoidtennis.github.io/AdaPT/",
+    titleHtml: `<span class="small-caps">AdaPT</span>: Towards Professional Tennis Styles for Humanoid Robots with Adaptive Motion Planning and Tracking`,
+    authorsHtml: `<a href="https://taohuang13.github.io/">Tao Huang</a>*‡,
+      <a>Ruofei Liu</a>*, <a>Xuchen Tang</a>, <a>Xinyin Zhang</a>,
+      <a href="https://renjunli99.github.io/">Junli Ren</a>,
+      <a href="https://why618188.github.io/">Huayi Wang</a>,
+      <a href="https://trap-1.github.io/">Feiyu Jia</a>, <a>Yukai Qi</a>,
+      <a href="https://yinkangning0124.github.io/">Kangning Yin</a>,
+      <a href="https://zengweishuai.github.io/">Weishuai Zeng</a>,
+      <a href="https://lipeng-chen.github.io/">Lipeng Chen</a>, <a>Xi Li</a>, <a>Ting Wu</a>,
+      <strong>Kailin Li</strong>, <a>Ruoli Dai</a>,
+      <a href="https://wangjingbo1219.github.io/">Jingbo Wang</a>†,
+      <a href="https://leihan.org/">Lei Han</a>†‡,
+      <a href="https://oceanpang.github.io/">Jiangmiao Pang</a>†`,
+    noteHtml: `(*=equal contribution, †=equal advising, ‡=project lead)`,
+    venueHtml: `<strong><em>arXiv</em>, 2026</strong>`,
+    linksHtml: `<a href="https://humanoidtennis.github.io/AdaPT/">project page</a>
+      /
+      <a href="https://arxiv.org/abs/2608.20087">arxiv</a>
+      /
+      <a href="https://github.com/noitom-robotics/AdaPT">code</a>
+      /
+      <a href="https://www.youtube.com/watch?v=mEF-YTn-ksU">video</a>`,
+    abstractHtml: `<span class="small-caps">AdaPT</span> learns professional humanoid tennis styles from
+      motion references recovered from broadcast video and motion capture while preserving the timing and
+      robustness required for real-world rallies and serves. It separates high-level stylistic motion
+      planning from low-level tracking, then adapts execution speed at both levels to reduce compounding
+      errors. The framework reproduces player-specific skills on Unitree G1 and the full-size Dobot Atom,
+      including camera-based serving without motion capture.`
+  },
+  {
     id: "internvla-a15",
     media: {
       image: "images/internvla_a15_teaser.png",

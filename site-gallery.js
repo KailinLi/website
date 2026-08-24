@@ -7,6 +7,7 @@ window.PUBLICATION_GALLERY = {
   "oakink": { "src": "images/gallery/oakink.webp", "width": 640, "height": 338 },
   "artiboost": { "src": "images/gallery/artiboost.webp", "width": 640, "height": 350 },
   "dart": { "src": "images/gallery/dart.webp", "width": 640, "height": 447 },
+  "adapt": { "src": "images/gallery/adapt.webp", "width": 640, "height": 404 },
   "internvla-a15": { "src": "images/gallery/internvla-a15.webp", "width": 640, "height": 412 },
   "scalebfm": { "src": "images/gallery/scalebfm.webp", "width": 640, "height": 326 },
   "reactivebfm": { "src": "images/gallery/reactivebfm.webp", "width": 640, "height": 304 },
