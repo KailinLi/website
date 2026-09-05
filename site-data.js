@@ -277,7 +277,7 @@ window.PUBLICATIONS = [
       <a href="https://leihan.org/">Lei Han</a>†‡,
       <a href="https://oceanpang.github.io/">Jiangmiao Pang</a>†`,
     noteHtml: `(*=equal contribution, †=equal advising, ‡=project lead)`,
-    venueHtml: `<strong><em>arXiv</em>, 2026</strong>`,
+    venueHtml: `<strong><em>CoRL</em>, 2026</strong>`,
     linksHtml: `<a href="https://humanoidtennis.github.io/AdaPT/">project page</a>
       /
       <a href="https://arxiv.org/abs/2608.20087">arxiv</a>
@@ -382,7 +382,7 @@ window.PUBLICATIONS = [
       <a href="https://tai-wang.github.io/">Tai Wang</a>,
       <a href="http://tianfan.info/">Tianfan Xue</a>†,
       <a href="https://wangjingbo1219.github.io/">Jingbo Wang</a>†`,
-    venueHtml: `<strong><em>arXiv</em>, 2026</strong>`,
+    venueHtml: `<strong><em>CoRL</em>, 2026</strong>`,
     linksHtml: `<a href="https://xiao-chen.tech/reactivebfm/">project page</a>
       /
       <a href="https://arxiv.org/abs/2606.30362">arxiv</a>
