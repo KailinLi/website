@@ -66,6 +66,22 @@
     }
   };
 
+  const getAuthorRole = (publication) => {
+    if (["first", "corresponding", "other"].includes(publication.authorRole)) {
+      return publication.authorRole;
+    }
+
+    const roles = publication.roles || [];
+    const authors = htmlToText(publication.authorsHtml);
+    if (roles.includes("corresponding")) {
+      return "corresponding";
+    }
+    if (roles.includes("first") || /^Kailin Li\b/.test(authors) || /Kailin Li\s*\*/.test(authors)) {
+      return "first";
+    }
+    return "other";
+  };
+
   const getPublicationTone = (publication) => {
     if (publication.tone) {
       return publication.tone;
@@ -86,15 +102,7 @@
       return "oral";
     }
 
-    if (roles.includes("corresponding") || /Kailin Li\s*[#†]/.test(text)) {
-      return "corresponding";
-    }
-
-    if (roles.includes("first") || /^Kailin Li\b/.test(text) || /Kailin Li\s*\*/.test(text)) {
-      return "first";
-    }
-
-    return "other";
+    return getAuthorRole(publication);
   };
 
   const mediaLayer = (source, className, type) => {

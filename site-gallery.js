@@ -7,12 +7,17 @@ window.PUBLICATION_GALLERY = {
   "oakink": { "src": "images/gallery/oakink.webp", "width": 640, "height": 338 },
   "artiboost": { "src": "images/gallery/artiboost.webp", "width": 640, "height": 350 },
   "dart": { "src": "images/gallery/dart.webp", "width": 640, "height": 447 },
+  "internw0-delta": { "src": "images/gallery/internw0-delta.webp", "width": 640, "height": 320 },
+  "internw0": { "src": "images/gallery/internw0.webp", "width": 640, "height": 306 },
+  "skel-wam": { "src": "images/gallery/skel-wam.webp", "width": 640, "height": 213 },
   "adapt": { "src": "images/gallery/adapt.webp", "width": 640, "height": 404 },
   "internvla-a15": { "src": "images/gallery/internvla-a15.webp", "width": 640, "height": 412 },
   "scalebfm": { "src": "images/gallery/scalebfm.webp", "width": 640, "height": 326 },
   "reactivebfm": { "src": "images/gallery/reactivebfm.webp", "width": 640, "height": 304 },
   "telecatch": { "src": "images/gallery/telecatch.webp", "width": 640, "height": 363 },
+  "cpf-tpami": { "src": "images/gallery/cpf-tpami.webp", "width": 640, "height": 299 },
   "oakink2": { "src": "images/gallery/oakink2.webp", "width": 640, "height": 341 },
   "color-neus": { "src": "images/gallery/color-neus.webp", "width": 640, "height": 340 },
-  "cpf": { "src": "images/gallery/cpf.webp", "width": 640, "height": 379 }
+  "cpf": { "src": "images/gallery/cpf.webp", "width": 640, "height": 379 },
+  "physical-ai": { "src": "images/gallery/physical-ai.webp", "width": 640, "height": 960 }
 };

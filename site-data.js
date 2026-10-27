@@ -1,6 +1,8 @@
+// Array order controls both the list and gallery; authorRole only controls accents.
 window.PUBLICATIONS = [
   {
     id: "gallant",
+    authorRole: "first",
     media: {
       image: "images/gallant_teaser.png",
       video: "images/gallant_video.mp4",
@@ -33,6 +35,7 @@ window.PUBLICATIONS = [
   },
   {
     id: "maniptrans",
+    authorRole: "first",
     media: {
       image: "images/maniptrans_teaser.png",
       video: "images/maniptrans_cut.mp4",
@@ -68,6 +71,7 @@ window.PUBLICATIONS = [
   },
   {
     id: "semgrasp",
+    authorRole: "first",
     media: {
       image: "images/semgrasp_teaser.png",
       ratio: "4 / 3"
@@ -98,6 +102,7 @@ window.PUBLICATIONS = [
   },
   {
     id: "favor",
+    authorRole: "first",
     media: {
       image: "images/favor_start.png",
       video: "images/FAVOR_dataset_cut.mp4",
@@ -129,6 +134,7 @@ window.PUBLICATIONS = [
   },
   {
     id: "chord",
+    authorRole: "first",
     media: {
       image: "images/chord_before.png",
       video: "images/chord_teaser.mp4",
@@ -162,6 +168,7 @@ window.PUBLICATIONS = [
   },
   {
     id: "oakink",
+    authorRole: "first",
     media: {
       image: "images/oakink_before.png",
       hoverImage: "images/oakink_after.png",
@@ -194,6 +201,7 @@ window.PUBLICATIONS = [
   },
   {
     id: "artiboost",
+    authorRole: "first",
     media: {
       image: "images/artiboost_before.png",
       hoverImage: "images/artiboost_after.jpg",
@@ -224,6 +232,7 @@ window.PUBLICATIONS = [
   },
   {
     id: "dart",
+    authorRole: "first",
     media: {
       image: "images/DART.png",
       ratio: "4 / 3"
@@ -256,7 +265,116 @@ window.PUBLICATIONS = [
       perfect-aligned 3D labels, called DARTset.`
   },
   {
+    id: "internw0-delta",
+    authorRole: "other",
+    media: {
+      image: "images/internw0-delta_teaser.webp",
+      video: "images/internw0-delta.mp4",
+      ratio: "1400 / 700"
+    },
+    titleHref: "https://internrobotics.github.io/InternW0-Delta/",
+    titleHtml: `<span class="small-caps">InternW0-Δ</span>: A World Action Model Bridging Predictive Dynamics and Actions with 20K+ Hours of Open Data`,
+    authorsHtml: `<a>Xingyu Miao</a>*, <a>Zizun Li</a>*, <a>Baole Fang</a>*,
+      <a>Kaiwen Song</a>*, <a>Tenghui Wang</a>*, <a>Hanxue Zhang</a>,
+      <a>Yating Wang</a>, <a>Xudong Li</a>*, <a>Yuping He</a>, <a>Xueyuan Wei</a>,
+      <a>Chao Gao</a>, <a>Xijie Yang</a>*, <a>Yingxiang Xu</a>, <a>Kerui Ren</a>,
+      <a>Wenqi Guo</a>, <a>Jianjun Zhou</a>, <a>Xinzhe Wang</a>, <a>Weiguang Zhao</a>,
+      <a>Ni Yang</a>, <a>Zetao Cai</a>, <a>Yufei Xue</a>, <a>Hengjie Li</a>,
+      <a>Zeyu He</a>, <a>Yuanzhen Zhou</a>, <a>Rong Fu</a>, <a>Jianyang Zhang</a>,
+      <a>Siwei Cui</a>, <a>Fuxian Huang</a>, <a>Yunsong Zhou</a>, <a>Xing Gao</a>,
+      <a>Yifei Yao</a>, <a>Qiaojun Yu</a>, <strong>Kailin Li</strong>,
+      <a>Ming Zhou</a>, <a>Mu Huang</a>, <a>Xinyue Li</a>, <a>Wenze Cui</a>,
+      <a>Bingqi Jiang</a>, <a>Xueyue Zhu</a>, <a>Junting Dong</a>†, <a>Haoyu Guo</a>†,
+      <a>Tao Lu</a>†, <a>Mulin Yu</a>†, <a>Bowen Zhou</a>, <a>Bin Zhao</a>,
+      <a>Tianfan Xue</a>, <a href="https://wnzhang.net/">Weinan Zhang</a>†,
+      <a>Chunhua Shen</a>†`,
+    noteHtml: `(*=equal contribution, †=corresponding author)`,
+    venueHtml: `<strong><em>arXiv</em>, 2026</strong>`,
+    linksHtml: `<a href="https://internrobotics.github.io/InternW0-Delta/">project page</a>
+      /
+      <a href="https://arxiv.org/abs/2609.31394">arxiv</a>
+      /
+      <a href="https://github.com/InternRobotics/InternW0-Delta">code</a>
+      /
+      <a href="https://huggingface.co/collections/InternRobotics/internw0">models</a>
+      /
+      <a href="https://internrobotics.github.io/InternW0-Delta/assets/videos/web/main-20260927/main-demo.mp4">video</a>`,
+    abstractHtml: `<span class="small-caps">InternW0-Δ</span> brings predictive dynamics into robot
+      action generation without rolling out future video at inference. Coupled video and action experts
+      learn from over 23,000 hours of robot, handheld-interface, and egocentric data, while future-state
+      and 4D tracking supervision encode motion and interaction geometry. Cached visual context enables
+      efficient action generation, with real-world evaluations spanning gripper and dexterous-hand
+      manipulation.`
+  },
+  {
+    id: "internw0",
+    authorRole: "other",
+    media: {
+      image: "images/internw0_teaser.webp",
+      video: "images/internw0.mp4",
+      ratio: "1400 / 669"
+    },
+    titleHref: "https://internrobotics.github.io/internw0/",
+    titleHtml: `<span class="small-caps">InternW0</span>: A Foundational Physical World Model for Efficient Real-World Interactions`,
+    authorsHtml: `<a>Jisong Cai</a>, <a>Yao Mu</a>, <a>Ganlin Yang</a>, <a>Zhe Cao</a>,
+      <a>Zhangzheng Tu</a>, <a>Xing Gao</a>, <strong>Kailin Li</strong>,
+      <a>Xinyu Zhan</a>, <a href="https://lixiny.github.io/">Lixin Yang</a>,
+      <a>Yangkun Zhu</a>, <a>Haoxiang Ma</a>, <a>Ming Zhou</a>, <a>Qiaojun Yu</a>,
+      <a>Yufei Xue</a>, <a>Liqun He</a>, <a>Yifei Yao</a>, <a>Yifan Zhu</a>,
+      <a>Long Ling</a>, <a>Bingqi Jiang</a>, <a>Haoyu Guo</a>, <a>Xueyue Zhu</a>,
+      <a>Bowen Zhou</a>, <a>Bin Zhao</a>, <a>Tianfan Xue</a>, <a>Chunhua Shen</a>,
+      <a href="https://wnzhang.net/">Weinan Zhang</a>`,
+    venueHtml: `<strong><em>arXiv</em>, 2026</strong>`,
+    linksHtml: `<a href="https://internrobotics.github.io/internw0/">project page</a>
+      /
+      <a href="https://arxiv.org/abs/2609.27656">arxiv</a>
+      /
+      <a href="https://github.com/InternRobotics/InternW0">code</a>
+      /
+      <a href="https://internrobotics.github.io/internw0/videos/intro.mp4?v=20260924">video</a>`,
+    abstractHtml: `<span class="small-caps">InternW0</span> couples video prediction with action
+      generation for closed-loop robot manipulation. An asynchronous architecture updates cached world
+      representations from fresh observations, enabling fast control without regenerating video at
+      every step. Pretrained on 7,200 hours of robot, simulation, and egocentric data, it incorporates
+      force and tactile feedback during downstream training and demonstrates long-horizon laboratory
+      workflows and contact-rich dexterous pipetting.`
+  },
+  {
+    id: "skel-wam",
+    authorRole: "other",
+    media: {
+      image: "images/skel-wam_teaser.webp",
+      video: "images/skel-wam.mp4",
+      ratio: "1400 / 465"
+    },
+    titleHref: "https://healorcai.github.io/Skel-WAM/",
+    titleHtml: `<span class="small-caps">Skel-WAM</span>: A Hand-Skeleton-Conditioned World Action Model for Human-to-Robot Manipulation Transfer`,
+    authorsHtml: `<a href="https://healorcai.github.io/">Zetao Cai</a>,
+      <a href="https://li-yaping.github.io/">Yaping Li</a>,
+      <a href="https://22364yiqun.github.io/">Yiqun Wang</a>, <a>Xinyu Zhan</a>,
+      <a>Yuyin Yang</a>, <a href="https://mahaoxiang822.github.io/">Haoxiang Ma</a>,
+      <strong>Kailin Li</strong>, <a href="https://inspirelt.github.io/">Tao Lu</a>,
+      <a href="https://oceanpang.github.io/">Jiangmiao Pang</a>,
+      <a href="https://eveneveno.github.io/lnxu/">Linning Xu</a>†,
+      <a href="https://dahua.site/">Dahua Lin</a>†`,
+    noteHtml: `(†=corresponding author)`,
+    venueHtml: `<strong><em>arXiv</em>, 2026</strong>`,
+    linksHtml: `<a href="https://healorcai.github.io/Skel-WAM/">project page</a>
+      /
+      <a href="https://arxiv.org/abs/2609.21514">arxiv</a>
+      /
+      <a href="https://github.com/HealorCai/Skel-WAM">code</a>
+      /
+      <a href="https://www.youtube.com/watch?v=svhF2z4pJsM">video</a>`,
+    abstractHtml: `<span class="small-caps">Skel-WAM</span> uses a shared hand-skeleton representation
+      to transfer manipulation skills from human demonstrations to robots. Coupled video and keypoint
+      experts learn interaction dynamics from human and robot data, while an action expert translates
+      these representations into robot commands. Human demonstrations without robot action labels
+      improve bimanual manipulation and transfer to task variations absent from robot training data.`
+  },
+  {
     id: "adapt",
+    authorRole: "other",
     media: {
       image: "images/adapt_teaser.webp",
       video: "images/adapt.mp4",
@@ -294,6 +412,7 @@ window.PUBLICATIONS = [
   },
   {
     id: "internvla-a15",
+    authorRole: "other",
     media: {
       image: "images/internvla_a15_teaser.png",
       video: "images/internvla_a15.mp4",
@@ -330,6 +449,7 @@ window.PUBLICATIONS = [
   },
   {
     id: "scalebfm",
+    authorRole: "other",
     media: {
       image: "images/scalebfm_teaser.png",
       video: "images/scalebfm.mp4",
@@ -365,6 +485,7 @@ window.PUBLICATIONS = [
   },
   {
     id: "reactivebfm",
+    authorRole: "other",
     media: {
       image: "images/reactivebfm_teaser.png",
       video: "images/reactivebfm.mp4",
@@ -399,6 +520,7 @@ window.PUBLICATIONS = [
   },
   {
     id: "telecatch",
+    authorRole: "other",
     media: {
       image: "images/telecatch.png",
       ratio: "16 / 9"
@@ -421,7 +543,35 @@ window.PUBLICATIONS = [
       robustness across dexterous hand embodiments and unseen object categories.`
   },
   {
+    id: "cpf-tpami",
+    authorRole: "other",
+    media: {
+      image: "images/cpf-tpami_teaser.webp",
+      video: "images/cpf-tpami.mp4",
+      ratio: "1306 / 610"
+    },
+    titleHref: "https://doi.org/10.1109/TPAMI.2024.3372102",
+    titleHtml: `Learning a Contact Potential Field for Modeling the Hand-Object Interaction`,
+    authorsHtml: `<a href="https://lixiny.github.io/">Lixin Yang</a>, <a>Xinyu Zhan</a>,
+      <strong>Kailin Li</strong>, <a href="https://wenqiangx.github.io/robotflowproject/">Wenqiang Xu</a>,
+      <a>Junming Zhang</a>, <a href="https://jeffli.site/">Jiefeng Li</a>,
+      <a href="https://www.mvig.org/">Cewu Lu</a>†`,
+    noteHtml: `(†=corresponding author)`,
+    venueHtml: `<strong><em>TPAMI</em>, 2024</strong>`,
+    linksHtml: `<a href="https://doi.org/10.1109/TPAMI.2024.3372102">paper</a>
+      /
+      <a href="https://github.com/lixiny/CPF">code</a>
+      /
+      <a href="images/cpf-tpami.mp4">demo</a>`,
+    abstractHtml: `This journal extension of <span class="small-caps">CPF</span> models hand-object
+      contact as a spring-mass potential field, combining attraction, repulsion, and geometric
+      constraints. Energy minimization encourages stable contact while reducing interpenetration.
+      The formulation supports both hand-object pose estimation and grasp generation, producing
+      physically plausible interactions even when training annotations contain contact errors.`
+  },
+  {
     id: "oakink2",
+    authorRole: "other",
     media: {
       image: "images/oakink2_begin.png",
       hoverImage: "images/oakink2_after.png",
@@ -452,6 +602,7 @@ window.PUBLICATIONS = [
   },
   {
     id: "color-neus",
+    authorRole: "other",
     media: {
       image: "images/Color_NeuS_ghostbear.jpg",
       video: "images/Color_NeuS_ghostbear.mp4",
@@ -480,6 +631,7 @@ window.PUBLICATIONS = [
   },
   {
     id: "cpf",
+    authorRole: "other",
     media: {
       image: "images/cpf_before.jpg",
       hoverImage: "images/cpf_after.png",
@@ -514,5 +666,38 @@ window.PUBLICATIONS = [
       elastic
       energy
       at the grasp position.`
+  },
+  {
+    id: "physical-ai",
+    authorRole: "other",
+    media: {
+      // Official book cover: https://internrobotics.github.io/physical-AI-book/images/monograph/cover-v4.png
+      image: "images/physical-ai_cover.webp",
+      ratio: "2 / 3",
+      listRatio: "1 / 1"
+    },
+    titleHref: "https://arxiv.org/abs/2610.27045",
+    titleHtml: `Physical AI: Concepts, Techniques, and Challenges`,
+    authorsHtml: `<a href="https://wnzhang.net/">Weinan Zhang</a>, <a>Chunhua Shen</a>,
+      <a>Tianfan Xue</a>, <a>Bin Zhao</a>, <a>Bingqi Jiang</a>, <a>Zihan Guo</a>,
+      <a>Zicai Cui</a>, <a>Yang Li</a>, <a>Ming Zhou</a>, <a>Xinyuan Chen</a>,
+      <a>Lihe Ding</a>, <a>Xiao Chen</a>, <a>Yujin Wang</a>, <a>Shi Guo</a>,
+      <a>Junting Dong</a>, <a>Tao Lu</a>, <a>Xing Shen</a>, <a>Haoyu Guo</a>,
+      <a>Yao Mu</a>, <a>Haiyong Yu</a>, <a>Haoxiang Ma</a>, <a>Fuxian Huang</a>,
+      <a>Qiaojun Yu</a>, <a>Yunsong Zhou</a>, <strong>Kailin Li</strong>,
+      <a>Zirui Wang</a>, <a>Yufei Xue</a>, <a>Weishuai Zeng</a>, <a>Tao Huang</a>,
+      <a>Zhigang Wang</a>, <a>Junli Liu</a>, <a>Pengyuan Wu</a>, <a>Pingrui Zhang</a>,
+      <a>Haotian Wang</a>, <a>Dongzhan Zhou</a>, <a>Jiafei Cao</a>, <a>Feng Yuan</a>,
+      <a>Xinyi Ye</a>, <a>Quanli Xuan</a>, <a>Mulin Yu</a>, <a>Shangding Gu</a>,
+      <a>Kaiwen Song</a>, <a>Dong Wang</a>, <a>Jiarui Li</a>, <a>Kehui Liu</a>,
+      <a>Zhongjie Jia</a>, <a>Dongjiang Li</a>, <a>Jiacheng Bao</a>, <a>Haoran Yang</a>,
+      <a>Zhaoqing Chen</a>, <a>Yiming Sun</a>, <a>Bowen Zhou</a>`,
+    venueHtml: `<strong><em>arXiv</em>, 2026</strong>`,
+    linksHtml: `<a href="https://arxiv.org/abs/2610.27045">arxiv</a>`,
+    abstractHtml: `This monograph examines physical AI as systems that perceive, model, and act on
+      the physical world through feedback. It connects multimodal perception, physical data and
+      simulation, world models, foundation models for manipulation and motor control, and
+      hardware-software integration, and discusses the challenges of real-time execution,
+      sim-to-real transfer, evaluation, and reliable deployment.`
   }
 ];
